@@ -62,7 +62,7 @@ namespace Vercom_products.Controllers
                         SqlCommand command = new SqlCommand("AddProductToCategory", sqlConnection);
                         command.CommandType = CommandType.StoredProcedure;
                         command.Parameters.AddWithValue("CategoryName", categoryName);
-                        command.Parameters.AddWithValue("ProductName", product.ProductName);
+                        command.Parameters.AddWithValue("ProductName", product.Name);
                         command.Parameters.AddWithValue("Width", product.Width);
                         command.ExecuteNonQuery();
                     }
